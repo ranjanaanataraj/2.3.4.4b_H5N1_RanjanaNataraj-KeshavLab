@@ -1,10 +1,35 @@
-# 2.3.4.4b-H5N1-analysis :duck: 🪿 
-This repository contains the code and workflows used to reproduce results from the study:  
-**“Avian influenza NA stalk length and HA glycosylation patterns reveal molecularly directed reassortment and emergence of highly pathogenic 2.3.4.4b H5N1.”**
+# 2.3.4.4b-H5N1-analysis 🦆🪿  
 
-It provides transparent, reproducible scripts to analyze **neuraminidase (NA) stalk length** and **hemagglutinin (HA) N-linked glycosylation sites**, and to visualize their combinatorial distributions across hosts and clades.
+[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)]()
+[![License: BSD-3](https://img.shields.io/badge/License-BSD%203--Clause-green.svg)]()
+[![Status](https://img.shields.io/badge/Status-Active-success.svg)]()
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
+[![bioRxiv DOI](https://img.shields.io/badge/bioRxiv-10.1101%2F2024.08.26.609722-red.svg)](https://www.biorxiv.org/content/10.1101/2024.05.22.595329v1.full)
 
+> **Avian influenza NA stalk length and HA glycosylation patterns reveal molecularly directed reassortment and emergence of highly pathogenic 2.3.4.4b H5N1**  
+> *Nataraj R. et al., 2024 — bioRxiv preprint*  
 
+A reproducible analysis framework to explore **neuraminidase (NA)** stalk length and **hemagglutinin (HA)** N-linked glycosylation patterns in H5N1 clade 2.3.4.4b.  
+It includes sequence parsing, motif detection, data merging, and visualization workflows (bubble plots + 3D KDE surfaces) for NA–HA co-evolution studies.
+
+## Dependencies
+
+This repository requires **Python 3.9 or later**.
+
+### Required Python packages
+
+| Package | Version (≥) | Purpose |
+| :------- | :----------- | :-------- |
+| `biopython` | 1.80 | Parsing FASTA files and sequence operations |
+| `pandas` | 1.4 | Tabular data handling and merging |
+| `matplotlib` | 3.7 | 2D and 3D plotting |
+| `scipy` | 1.9 | Kernel density estimation (KDE) computations |
+| `seaborn` | 0.12 | Visualization styling |
+
+Install all dependencies with:
+```bash
+pip install biopython pandas matplotlib seaborn scipy
+```
 
 <details>
 <summary><b>🧭 Project Overview (click to expand)</b></summary>
