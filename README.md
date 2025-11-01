@@ -64,7 +64,7 @@ graph TD
 ### Clone and set up dependencies
 
 ```bash
-git clone https://github.com/ranjanaanataraj/2.3.4.4b-H5N1_RanjanaNataraj-KeshavLab.git
+git clone https://github.com/ranjanaanataraj/2.3.4.4b-H5N1_RanjanaNataraj-KesavLab.git
 cd 2.3.4.4b-H5N1-analysis
 python -m venv .venv && source .venv/bin/activate
 pip install -U pip && pip install 
