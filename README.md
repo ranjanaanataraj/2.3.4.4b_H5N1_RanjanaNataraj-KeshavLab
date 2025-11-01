@@ -39,19 +39,14 @@ graph TD
 ### Clone and set up dependencies
 
 ```bash
-git clone https://github.com/ranjanaanataraj/2.3.4.4b-H5N1-analysis.git
+git clone https://github.com/ranjanaanataraj/2.3.4.4b-H5N1_RanjanaNataraj-KeshavLab.git
 cd 2.3.4.4b-H5N1-analysis
 python -m venv .venv && source .venv/bin/activate
 pip install -U pip && pip install 
 ```
 
-### Run the complete toy example
 
-```bash
-make example
-```
-
-### Or manually, step-by-step
+### Step-by-step
 ```bash
 # 1. Compute NA stalk lengths
 python avian_na_ha_pipeline.py na \
@@ -89,7 +84,7 @@ python viz_kde3d.py \
 ### Workflow
 
 <div align="center">
-  <img width="763" alt="image" src="https://github.com/user-attachments/assets/20857f8b-aa0f-4893-b086-b9da8493980f" />
+  <img width="895" height="686" alt="image" src="https://github.com/user-attachments/assets/d4cb2252-1055-48df-ad79-cf3672b85fa4" />
 
 </div>
 
@@ -132,7 +127,24 @@ python viz_kde3d.py \
       Output: N1_full_aligned.fasta — all sequences aligned to a reference with known TM–stalk–head regions.
 
 
-4. **Identify stalk boundaries using regular expressions**  
+4. **Identify stalk boundaries using regular expressions**
+
+
+   The stalk region in the N1 protein sequence can be identified by locating the boundaries between:
+    1. The transmembrane (TM) domain and the stalk (stalk start).
+    2. The stalk and the head domain (stalk end). To define these boundaries, we use regular expressions (stak_begin_regex and stalk_end_regex) that describe the patterns at these junctions.
+  
+   
+       
+
+     <div align="center">
+
+
+      <img width="637" height="190" alt="image" src="https://github.com/user-attachments/assets/670883c6-daf2-4b66-8394-9bec67a6140e" />
+
+
+     </div>
+       
    Use the patterns defined in your script:  
 
    ```python
@@ -142,7 +154,15 @@ python viz_kde3d.py \
 
    These delimit the stalk region in the consensus alignment.
 
-6. **Compute stalk lengths**
+5. **Compute stalk lengths**
+     <div align="center">
+
+
+     <img width="637" height="240" alt="image" src="https://github.com/user-attachments/assets/80901868-2be4-42a9-b462-c36332e145e3" />
+
+
+     </div>
+   
 
    Run:
    ```bash
