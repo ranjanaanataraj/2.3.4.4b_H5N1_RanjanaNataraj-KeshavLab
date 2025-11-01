@@ -351,13 +351,6 @@ Output → docs/gls_kde3d.png (PNG; .svg or .tiff for vector)
 ## Reproducibility notes
 
 - Input format: FASTA headers must contain EPI_ISL_xxxxxxx|YYYY-MM-DD.
-
-- Dependencies: listed in pyproject.toml.
-
-- Testing: lightweight unit tests in tests/.
-
-- CI: GitHub Actions runs tests + example builds.
-
 - Ethics: GISAID data not redistributed; users supply their own sequences.
 - Audit logs: each command can output a JSON log via --audit.
 
