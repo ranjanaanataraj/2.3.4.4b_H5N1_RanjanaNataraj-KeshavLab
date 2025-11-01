@@ -9,9 +9,9 @@
 > **Avian influenza NA stalk length and HA glycosylation patterns reveal molecularly directed reassortment and emergence of highly pathogenic 2.3.4.4b H5N1**  
 > *Nataraj R. et al., 2024 — bioRxiv preprint*  
 
-A reproducible analysis framework to explore **neuraminidase (NA)** stalk length and **hemagglutinin (HA)** N-linked glycosylation patterns in H5N1 clade 2.3.4.4b.  
-It includes sequence parsing, motif detection, data merging, and visualization workflows (bubble plots + 3D KDE surfaces) for NA–HA co-evolution studies.
+A reproducible analysis framework to explore **neuraminidase (NA)** stalk length and **hemagglutinin (HA)** N-linked glycosylation patterns in H5N1 clade 2.3.4.4b. It includes sequence parsing, motif detection, data merging, and visualization workflows (bubble plots + 3D KDE surfaces) for NA–HA co-evolution studies.
 
+---
 ## Dependencies
 
 This repository requires **Python 3.9 or later**.
@@ -104,6 +104,7 @@ python viz_kde3d.py \
   --elev 8 --azim -80 \
   --out docs/gls_kde3d.png
 ```
+---
 ## NA stalk length analysis
 
 ### Workflow
@@ -215,7 +216,7 @@ python viz_kde3d.py \
 | 1111111     | 2021-06-15 | 33            |
 | 2222222     | 2022-03-20 | 53            |
 
-
+---
 ## HA glycosylation analysis
 
 ### Workflow
@@ -267,7 +268,7 @@ Gaps (-) are removed before scanning.
 | 2222222     | 2022-03-20 | 6            |
 
 
-
+---
 ## Bubble plot visualization (H5 #GLS × NA stalk length)
 
 This figure visualizes H5 glycosylation-site counts versus NA subtype/stalk length. Each bubble’s size ∝ frequency and color ∝ stalk length.
@@ -346,7 +347,7 @@ Output → docs/gls_kde3d.png (PNG; .svg or .tiff for vector)
 
 - Adjust --bw, --elev, --azim interactively to refine look.
 
-
+---
 ## Reproducibility notes
 
 - Input format: FASTA headers must contain EPI_ISL_xxxxxxx|YYYY-MM-DD.
@@ -358,5 +359,8 @@ Output → docs/gls_kde3d.png (PNG; .svg or .tiff for vector)
 - CI: GitHub Actions runs tests + example builds.
 
 - Ethics: GISAID data not redistributed; users supply their own sequences.
+- Audit logs: each command can output a JSON log via --audit.
 
-Audit logs: each command can output a JSON log via --audit.
+## **Contributors**
+
+👩‍🔬 **Ranjana Nataraj** (@ranjanaanataraj)
